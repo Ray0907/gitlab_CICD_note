@@ -3,20 +3,22 @@ gitlab CI/CD Note
 
 .gitlab-ci.yml
 --------------
-Create a .gitlab-ci.yml config in the  root  of your repository. 
+* Create a .gitlab-ci.yml config in the  root  of your repository. 
+* three stages test -> build -> deploy.
     
-    > touch .gitlab-ci.yml
-    > vi .gitlab-ci.yml
-    
-    # node express config  
-    image: node:10
-    before_script:
-    - npm install
-    - npm audit fix
-    
-    test:
-    script:
-    - npm test
+        > touch .gitlab-ci.yml
+        > vi .gitlab-ci.yml
+
+        # node express config  
+        image: node:10
+        before_script:
+        - npm install
+        - npm audit fix
+
+        test:
+        script:
+        - npm test
+
 
 
 Docker

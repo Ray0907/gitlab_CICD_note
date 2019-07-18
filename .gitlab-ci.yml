@@ -1,0 +1,9 @@
+image: node:10
+
+before_script:
+  - npm install
+  - npm audit fix
+  
+test:
+  script:
+  - npm test
